@@ -227,10 +227,10 @@ Class Items {
             return array('value' => 'sourceType.vendor');
         }
         $questLoot = Armory::$wDB->selectCell("
-		SELECT `entry`
+		SELECT `Id`
 		  FROM `quest_template`
-		      WHERE `RewChoiceItemId1` = %d OR `RewChoiceItemId2` = %d OR `RewChoiceItemId3` = %d OR 
-		          `RewChoiceItemId4` = %d OR `RewChoiceItemId5` = %d OR `RewChoiceItemId6` = %d LIMIT 1", $item, $item, $item, 
+		      WHERE `RewardChoiceItemId1` = %d OR `RewardChoiceItemId 2` = %d OR `RewardChoiceItemId 3` = %d OR 
+		          `RewardChoiceItemId 4` = %d OR `RewardChoiceItemId 5` = %d OR `RewardChoiceItemId 6` = %d LIMIT 1", $item, $item, $item, 
 		$item, $item, $item);
         if($questLoot) {
             return array('value' => 'sourceType.questReward');
