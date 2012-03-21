@@ -367,10 +367,10 @@ Class Items {
                 break;
             case 'questreward':
                 $QuestLoot = Armory::$wDB->select("
-                SELECT `entry` AS `id`, `Title` AS `name`, `QuestLevel` AS `level`, `MinLevel` AS `reqMinLevel`, `SuggestedPlayers` AS `suggestedPartySize`
+                SELECT `Id` AS `id`, `Title` AS `name`, `QuestLevel` AS `level`, `MinLevel` AS `reqMinLevel`, `SuggestedPlayers` AS `suggestedPartySize`
                     FROM `quest_template`
-                        WHERE `RewChoiceItemId1` = %d OR `RewChoiceItemId2` = %d OR `RewChoiceItemId3` = %d OR 
-                            `RewChoiceItemId4` = %d OR `RewChoiceItemId5` = %d OR `RewChoiceItemId6` = %d", $item, $item, $item, $item, $item, $item);
+                        WHERE `RewardChoiceItemId1` = %d OR `RewardChoiceItemId2` = %d OR `RewardChoiceItemId3` = %d OR 
+                            `RewardChoiceItemId4` = %d OR `RewardChoiceItemId5` = %d OR `RewardChoiceItemId6` = %d", $item, $item, $item, $item, $item, $item);
                 if(!is_array($QuestLoot)) {
                     return false;
                 }
