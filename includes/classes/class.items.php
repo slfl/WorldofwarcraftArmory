@@ -229,8 +229,8 @@ Class Items {
         $questLoot = Armory::$wDB->selectCell("
 		SELECT `Id`
 		  FROM `quest_template`
-		      WHERE `RewardChoiceItemId1` = %d OR `RewardChoiceItemId 2` = %d OR `RewardChoiceItemId 3` = %d OR 
-		          `RewardChoiceItemId 4` = %d OR `RewardChoiceItemId 5` = %d OR `RewardChoiceItemId 6` = %d LIMIT 1", $item, $item, $item, 
+		      WHERE `RewardChoiceItemId1` = %d OR `RewardChoiceItemId2` = %d OR `RewardChoiceItemId3` = %d OR 
+		          `RewardChoiceItemId4` = %d OR `RewardChoiceItemId5` = %d OR `RewardChoiceItemId6` = %d LIMIT 1", $item, $item, $item, 
 		$item, $item, $item);
         if($questLoot) {
             return array('value' => 'sourceType.questReward');
