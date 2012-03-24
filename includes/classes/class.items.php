@@ -389,7 +389,7 @@ Class Items {
                 if(!is_array($QuestStart)) {
                     return false;
                 }
-                $lootTable = Armory::$wDB->selectRow("SELECT `entry` AS `id`, `Title` AS `name`, `QuestLevel` AS `level`, `MinLevel` AS `reqMinLevel`, `SuggestedPlayers` AS `suggestedPartySize` FROM `quest_template` WHERE `entry`=%d", $QuestStart);
+               $lootTable = Armory::$wDB->selectRow("SELECT `Id` AS `id`, `Title` AS `name`, `QuestLevel` AS `level`, `MinLevel` AS `reqMinLevel`, `SuggestedPlayers` AS `suggestedPartySize` FROM `quest_template` WHERE `Id`=%d", $QuestStart);
                 if(Armory::GetLocale() != 'en_gb' || Armory::GetLocale() != 'en_us') {
                     $lootTable['name'] = Mangos::GetQuestInfo($QuestStart, 'title');
                 }
