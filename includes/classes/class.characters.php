@@ -975,6 +975,9 @@ Class Characters {
 			case 'relic':
 				return $this->equipmentCache[34];
 				break;
+				case 'thrown':
+				return $this->equipmentCache[35];
+				break;
 			case 'tabard':
 				return $this->equipmentCache[36];
 				break;
