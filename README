@@ -9,3 +9,13 @@ The data contained herein is proprietary to Blizzard Entertainment, Inc. You are
 
 Download icons and models:
 https://github.com/Seejayz/WorldofwarcraftArmory/downloads
+
+Create new MySQL database (`armory`, for expample) with utf8_general_ci encoding;
+Import Armory.sql to Armory database & characters_patch.sql to character database.
+Rename includes/classes/configuration.php.default to configuration.php and edit this file (read comments).
+You should edit these values according with your MySQL configs (user/password/dbname).
+Downloads icons archive from "Downloads" on GitHub.com and unpack it to "wow-icons/_images/"
+Unzip htaccess.zip archive and place unpacked .htaccess file to root site dir for correct scripts work.
+To make it fully working you need to apply the armory patch to the Trinity core with tools/{SERVER}/armory.patch
+If you use UNIX system, you need to manage access rights to allow script write data to 'cache' folder.
+To make the 3D viewer work then you've got to download these model files and extract it to your "model" Folder.
